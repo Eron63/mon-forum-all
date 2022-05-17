@@ -1,0 +1,28 @@
+services:
+  mongo:
+    container_name: mongo_mon_forum_db
+    image: mongo
+    ports:
+      - "27017:27017"
+  mongo-express:
+    container_name: mongo_express_mon_forum_db
+    image: mongo-express
+    depends_on:
+      - mongo
+    ports:
+      - "8081:8081"
+  back:
+    build: ./mon-forum-back
+    image: mon-forum-back:1.0.0
+    container_name: mon_forum_back
+    depends_on:
+      - mongo_mon_forum_db
+    ports:
+      - "8080:8080"
+
+  front:
+    build: ./mon-forum-client
+    image: mon-forum-client:1.0.0
+    container_name: mon_forum_client
+    ports:
+      - "80:80"

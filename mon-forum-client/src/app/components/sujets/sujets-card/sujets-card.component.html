@@ -1,0 +1,20 @@
+<div class="card">
+    <a routerLink="{{sujet.idSujet}}">
+        <h4>{{sujet.tilteSujet}}</h4>
+    </a>
+    <div class="row">
+        <div class="col-sm">
+            <p>créée le {{sujet.createdDateSujet | date:'short'}}</p>
+        </div>
+        <div class="col-sm">
+            <p>modifié le {{sujet.updateDateSujet | date:'short'}}</p>
+        </div>
+        <div class="col-sm">
+            <p>Nombre de like : {{sujet.likesSujet}}</p>
+        </div>
+        <div class="col-sm">
+            <img src="../../../../assets/images/green_thumb.png" alt="">
+            <img src="../../../../assets/images/red_thumb.png" alt="">
+        </div>
+    </div>
+</div>

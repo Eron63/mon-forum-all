@@ -1,0 +1,9 @@
+<div *ngFor="let sujet of sujets">
+    <app-sujets-card [sujet]="sujet"></app-sujets-card>
+</div>
+<div>
+    <label style="margin: 10px;">Nom du nouveau sujet: </label>
+
+    <p><input type="text" id="username" name="username" [(ngModel)]="newSujetName">
+        <button style="margin: 10px;" (click)="ajouterSujet()">Ajouter un sujet</button>
+</div>

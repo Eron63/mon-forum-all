@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+    database: mon_forum_db
+    host: localhost
+    port: 27017
+server:
+  port: 8084
